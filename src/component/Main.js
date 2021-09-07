@@ -28,7 +28,7 @@ class Main extends Component {
                     return(
                         <HornBeast 
                         title={elem.title}
-                        img_url={elem.image_url}
+                        image_url={elem.image_url}
                         description={elem.description}
 
                         />
