@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 
        constructor(props){
            super(props);
-           this.status=  {
+           this.state=  {
               
                votForIt:0
            }
