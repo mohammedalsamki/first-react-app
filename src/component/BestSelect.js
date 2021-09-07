@@ -15,7 +15,7 @@ class BestSelect extends Component {
 
 
                             <Card>
-                                <Card.Img src={this.props.datamodel.img_url} alt={this.props.title} />
+                                <Card.Img src={this.props.datamodel.image_url} alt={this.props.title} />
                                 <Card.Body>
                                     <Card.Text>
                                         {this.props.description}

@@ -4,32 +4,37 @@ import { React, Component } from "react";
 import Header from "./component/Header";
 import Footer from "./component/Footer";
 import Main from "./component/Main";
+import HornbeastData from "./data.json"
+import BestSelect from "./component/BestSelect";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 class App extends Component{
 
 
-  // constructor(props){
-  //   super(props);
-  //   this.state ={
-  //     animalData :data,
-  //     show:false,
-  //     datamodel:{},
-  //   }
-  // }
-  // showhand= (data) =>{
-  //   this.setState({
-  //     show:true,
-  //     datamodel:data,
+  constructor(props){
+    super(props);
+    this.state ={
+      animalData :HornbeastData,
+      show:false,
+      datamodel:{},
+    }
+  }
+  showhand= (data) =>{
+    this.setState({
+      show:true,
+      datamodel:data,
 
 
-  //   })
-  // }
-  // closehand=(data) =>{
-  //   this.setState({
-  //     show:false,
-  //   })
-  // }
+    })
+  }
+  closehand=() =>{
+    this.setState({
+      show:false,
+    })
+  }
   render(){
 
    
@@ -49,9 +54,9 @@ class App extends Component{
     }}>
       {/* <Main title={hornedBeastAnimal[0].title} image_url={hornedBeastAnimal[0].image_url}   description={hornedBeastAnimal[0].description} >  */}
       <Header/>
-      <Main />
+      <Main modalselect={this.showhand} data={this.statue.animalData}/>
 
-     
+     <BestSelect exitHandler={this.closehand} dataShow={this.statue.show} datamodel={this.statue.datamodel}/>
       <Footer/>
 
       </div>
