@@ -50,7 +50,7 @@ import React, { Component } from 'react'
 
 
                       <h2>{this.props.title}</h2>
-                      <img onClick={this.handleCick}  src={this.props.image_url} title={this.props.title} alt='imgdata'/>
+                      <img style={{width : "500px"}} onClick={this.handleCick}  src={this.props.image_url} title={this.props.title} alt='imgdata'/>
                       <h3>{this.state.votForIt}💖</h3>
                       <h4>{this.props.description}</h4>
                       <h4>{this.props.keyword}</h4>
