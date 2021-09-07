@@ -32,7 +32,7 @@ class Main extends Component {
                         title={elem.title}
                         image_url={elem.image_url}
                         description={elem.description}
-                        modal={this.peops.modalselect}
+                        modal={this.props.modalselect}
 
                         />
                     )
