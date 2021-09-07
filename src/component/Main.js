@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import HornbeastData from "./data.json"
 import HornBeast from './HornBeast'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 class Main extends Component {
@@ -28,8 +30,9 @@ class Main extends Component {
                     return(
                         <HornBeast 
                         title={elem.title}
-                        img_url={elem.image_url}
+                        image_url={elem.image_url}
                         description={elem.description}
+                        modal={this.peops.modalselect}
 
                         />
                     )
