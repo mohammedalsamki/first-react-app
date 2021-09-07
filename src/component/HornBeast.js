@@ -43,7 +43,7 @@ import {Card,Button,Col} from 'react-bootstrap';
                           <Card.Title > {this.props.title}</Card.Title>
                           <Card.Text>{this.props.description}</Card.Text>
                       </Card.Body>
-                      <Button onClick={this.clickOnMe} variant="info">💖 {this.props.votForIt}</Button>
+                      <Button onClick={this.clickOnMe} variant="info">💖 {this.props.lovingIt}</Button>
                       <Button onClick={this.clickOnMe}  >  click here</Button>
 
                       </Card>
