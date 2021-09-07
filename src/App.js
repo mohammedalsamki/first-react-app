@@ -4,7 +4,7 @@ import { React, Component } from "react";
 import Header from "./component/Header";
 import Footer from "./component/Footer";
 import Main from "./component/Main";
-import HornbeastData from "./data.json"
+import HornbeastData from "./component/data.json"
 import BestSelect from "./component/BestSelect";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -54,9 +54,9 @@ class App extends Component{
     }}>
       {/* <Main title={hornedBeastAnimal[0].title} image_url={hornedBeastAnimal[0].image_url}   description={hornedBeastAnimal[0].description} >  */}
       <Header/>
-      <Main modalselect={this.showhand} data={this.statue.animalData}/>
+      <Main modalselect={this.showhand} data={this.state.animalData}/>
 
-     <BestSelect exitHandler={this.closehand} dataShow={this.statue.show} datamodel={this.statue.datamodel}/>
+     <BestSelect exitHandler={this.closehand} dataShow={this.state.show} datamodel={this.state.datamodel}/>
       <Footer/>
 
       </div>
