@@ -52,11 +52,10 @@ class App extends Component{
         alignItems: "center",
         backgroundColor: "silver"
     }}>
-      {/* <Main title={hornedBeastAnimal[0].title} image_url={hornedBeastAnimal[0].image_url}   description={hornedBeastAnimal[0].description} >  */}
       <Header/>
       <Main modalselect={this.showhand} data={this.state.animalData}/>
 
-     <BestSelect exitHandler={this.closehand} dataShow={this.state.show} datamodel={this.state.datamodel}/>
+     <BestSelect exitHandler={this.closehand} dataShow={this.state.show } datamodel={this.state.datamodel}/>
       <Footer/>
 
       </div>

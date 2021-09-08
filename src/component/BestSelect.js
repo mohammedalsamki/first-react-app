@@ -4,27 +4,29 @@ import { Modal, Button, Card } from 'react-bootstrap'
 
 class BestSelect extends Component {
     render() {
+        console.log(this.props);
         return (
             <>
 
-                <Modal Show={this.props.dataShow}>
+                <Modal show={this.props.dataShow} >
                     <Modal.Header>
-                        <Modal.Title>{this.props.datamodel}</Modal.Title>
+                        <Modal.Title >{this.props.datamodel.title}</Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
 
 
-                            <Card>
-                                <Card.Img src={this.props.datamodel.image_url} alt={this.props.title} />
+                            <Card >
+                                <Card.Img width={200}
+                                height={280} src={this.props.datamodel.image_url} alt={this.props.title} />
                                 <Card.Body>
                                     <Card.Text>
-                                        {this.props.description}
+                                        {this.props.datamodel.description}
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button onClick={this.props.exitHandler}>Close</Button>
+                            <Button variant="secondary" onClick={this.props.exitHandler}>Close</Button>
                         </Modal.Footer>
                         </Modal>
 
