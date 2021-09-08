@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Card,Button,Col} from 'react-bootstrap';
+import {Card,Button} from 'react-bootstrap';
 
   class HornBeast extends Component {
 
@@ -36,20 +36,18 @@ import {Card,Button,Col} from 'react-bootstrap';
      render() {
          return (
              <div>
-                  <Col xs={12} md={6} sm={9} xl={4} style={{ paddingTop: "10vh", paddingLeft: "10vh" }} >
                   <Card style={{ width: "60%", height: "80%"  }} bg={'warning'} >
                       <Card.Img width = {300} height= {400} onClick={this.changingVoting} variant="top" src={this.props.image_url} alt={this.props.title}/>
                       <Card.Body>
                           <Card.Title > {this.props.title}</Card.Title>
                           <Card.Text>{this.props.description}</Card.Text>
                       </Card.Body>
-                      <Button onClick={this.clickOnMe} variant="info">💖 {this.props.lovingIt}</Button>
-                      <Button onClick={this.clickOnMe}  >  click here</Button>
+                      <Button  variant="info">💖 {this.state.lovingIt}</Button>
+                      <Button onClick={this.clickOnMe} >  click here</Button>
 
                       </Card>
 
                 
-                      </Col>
 
 
                       {/* <h2>{this.props.title}</h2>
