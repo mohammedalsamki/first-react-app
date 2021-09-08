@@ -7,6 +7,7 @@ class BestSelect extends Component {
         console.log(this.props);
         return (
             <>
+            console.log(datamodel);
 
                 <Modal show={this.props.dataShow} >
                     <Modal.Header>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Card,Button} from 'react-bootstrap';
+import {Card,Button,Col} from 'react-bootstrap';
 
   class HornBeast extends Component {
 
@@ -21,23 +21,28 @@ import {Card,Button} from 'react-bootstrap';
        }
 
             clickOnMe= ()=>{
-                this.props.modal({
-                    title: this.props.title,
-                    image_url: this.props.image_url,
-                    description: this.props.description
-                })
+                // this.props.modal({
+                //     title: this.props.title,
+                //     image_url: this.props.image_url,
+                //     description: this.props.description
+                // })
+                this.props.selected(this.props.title);
             }
     // handleCick=()=>{
     //     this.setState({
     //         votForIt:this.state.votForIt+1
     //     })
     // }
+    
 
      render() {
+        console.log(this.props)
+
          return (
-             <div>
-                  <Card style={{ width: "60%", height: "80%"  }} bg={'warning'} >
-                      <Card.Img width = {300} height= {400} onClick={this.changingVoting} variant="top" src={this.props.image_url} alt={this.props.title}/>
+             <>
+                 <Col xs={4}>
+                  <Card style={{ width: "70%", height: "50%"   }} bg={'warning'} >
+                      <Card.Img width = {600} height= {400} onClick={this.changingVoting} variant="top" src={this.props.image_url} alt={this.props.title}/>
                       <Card.Body>
                           <Card.Title > {this.props.title}</Card.Title>
                           <Card.Text>{this.props.description}</Card.Text>
@@ -46,7 +51,7 @@ import {Card,Button} from 'react-bootstrap';
                       <Button onClick={this.clickOnMe} >  click here</Button>
 
                       </Card>
-
+                      </Col>
                 
 
 
@@ -56,10 +61,9 @@ import {Card,Button} from 'react-bootstrap';
                       <h4>{this.props.description}</h4>
                       <h4>{this.props.keyword}</h4>
                       <h4>{this.props.horns}</h4> */}
-             </div>
+             </>
          )
      }
  }
  
  export default HornBeast
- 
