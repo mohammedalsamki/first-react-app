@@ -1,5 +1,3 @@
-
-
 import { React, Component } from "react";
 import Header from "./component/Header";
 import Footer from "./component/Footer";
@@ -21,15 +19,33 @@ class App extends Component{
       show:false,
       datamodel:{},
     }
-  }
-  showhand= (data) =>{
+  };
+  filterhorn=(horns)=>{
     this.setState({
-      show:true,
-      datamodel:data,
-
-
+      animalData:horns,
     })
   }
+  selected=(title) =>{
+    // eslint-disable-next-line array-callback-return
+    let findanimal = HornbeastData.find(element => {
+      if (element.title === title) {
+        return element;
+        
+      }})
+
+      this.setState({
+        show : true,
+        datamodel:findanimal
+      })
+    }
+  // showhand= (data) =>{
+  //   this.setState({
+  //     show:true,
+  //     datamodel:data,
+
+
+  //   })
+  // }
   closehand=() =>{
     this.setState({
       show:false,
@@ -38,6 +54,7 @@ class App extends Component{
   render(){
 
    
+    console.log(this.props)
 
    
     
@@ -53,9 +70,17 @@ class App extends Component{
         backgroundColor: "silver"
     }}>
       <Header/>
-      <Main modalselect={this.showhand} data={this.state.animalData}/>
+      <Main 
+      animalData={this.state.animalData}
+      selected={this.selected}
+      filterhorn={this.filterhorn}
+      />
 
-     <BestSelect exitHandler={this.closehand} dataShow={this.state.show } datamodel={this.state.datamodel}/>
+     <BestSelect
+      
+      dataShow={this.state.show } 
+      exitHandler={this.closehand}
+      datamodel={this.state.datamodel}/>
       <Footer/>
 
       </div>
@@ -64,7 +89,3 @@ class App extends Component{
 }
 
 export default App;
-
-
-
-
